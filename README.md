@@ -1,5 +1,5 @@
 # postcss-json-properties
-PostCSS plugin that read json file to css custom properties.
+PostCSS plugin that read json file to [CSS Custom Properties](https://www.w3.org/TR/css-variables/).
 
 ## Motivation
 
