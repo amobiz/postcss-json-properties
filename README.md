@@ -43,6 +43,29 @@ Use:
 }
 ```
 
+## Alternatives
+
+Currently you can do this via [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties#variables):
+
+```js
+// dependencies
+var fs = require("fs")
+var postcss = require("postcss")
+var customProperties = require("postcss-custom-properties")
+var variables = require('constants.json');
+
+// css to be processed
+var css = fs.readFileSync("input.css", "utf8")
+
+// process css using postcss-custom-properties
+var output = postcss()
+	.use(customProperties({
+		variables: variables
+	}))
+	.process(css)
+	.css
+```
+
 ## Contribute
 If you found this might be useful or got some ideas, please leave a comment in this [issue](https://github.com/amobiz/postcss-json-properties/issues/1).
 
